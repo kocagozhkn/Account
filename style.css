@@ -1,0 +1,39 @@
+li,
+table,
+td,
+tr {
+  margin: 1px;
+  border: 1px solid black;
+}
+
+
+.tabcontent {
+width: 800px;
+  margin-bottom: 25px;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.erase {
+  background-color: gray;
+}
+input{
+  width: 90px;
+
+}
+
+
+.accounty{
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  margin: 2px;
+}
+
+.accountinfo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container motor">
+      <div class="container">
+        <button class="tablinks" onclick="openCity(event, 'Company')">
+          Add Company
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Invoice')">
+          Add Invoice
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Chart')">
+          Chart
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Accounting')">
+          Accounting
+        </button>
+      </div>
+      <br />
+
+      <div id="Company" class="container tabcontent">
+        <div class="input-group mb-3">
+          <input
+            id="addcompany"
+            type="text"
+            class="form-control"
+            placeholder="Add Company"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+            >
+              Button
+            </button>
+          </div>
+        </div>
+        <hr />
+
+        <ul class="list-group"></ul>
+      </div>
+      <div id="Accounting" class="container tabcontent">
+        <div class="container accountinfo">
+          
+        </div>
+      </div>
+      <div id="Invoice" class="container tabcontent">
+        <input class="invoiceno" placeholder="Invoice No" />
+        <input class="date" placeholder="Date" />
+        <select class="selectcompany">
+          <option value="" disabled selected>Company</option>
+        </select>
+
+        <input class="country" placeholder="Country" />
+
+        <input class="netweight" placeholder="Net Weight" />
+        <input class="grossweight" placeholder="Gross Weight" />
+        <input class="amount" placeholder="Amount" />
+
+        <button class="addButton">ADD</button>
+        <hr />
+        <table class="table table-striped" style="width:100%">
+          <tr>
+            <th>Invoice No</th>
+            <th>Date</th>
+            <th>Company</th>
+            <th>Country</th>
+            <th>Net Weight</th>
+            <th>Gros Weight</th>
+            <th>Amount</th>
+            <th>Edit</th>
+          </tr>
+        </table>
+
+        <h1 class="total">Total Amount:</h1>
+      </div>
+      <div class="container tabcontent" id="Chart">
+        <div class="chart" style="width:600px">
+          <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+      </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="mainapp.js"></script>
+  </body>
+</html>
